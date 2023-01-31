@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  /*   border: 1px solid black; */
+}
+
+
+
+.collapsetab ul {
+  display: flex;
+  min-height: 70vh;
+  max-height: 70vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style-type: none;
+}
+
+.collapsetab li {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  padding: 20px;
+  background: #e74c3c;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.collapsetab li:hover {
+  background: #e53f2e;
+}
+.collapsetab li.active {
+  flex: 5;
+  background: #fff;
+  cursor: default;
+}
+.collapsetab li.active h1 {
+  color: #fff;
+}
+.collapsetab li.active .section-content {
+  flex: 5;
+  opacity: 1;
+  transform: scaleX(1);
+  color: #fff;
+  /*text-align: justify;*/
+  text-align: left;
+}
+.collapsetab li .section-title {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: -70px;
+  padding: 0;
+  /*text-align: center;*/
+  color: white;
+}
+.collapsetab li .section-title h1 {
+  margin: 0;
+  transform: rotate(90deg);
+  white-space: nowrap;
+}
+.collapsetab li .section-content {
+  flex: 1;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: all 0.25s 0.1s ease-out;
+}
+.collapsetab li:first-child {
+  background-color: #F8F9FA;
+  background: linear-gradient(to left, #F8F9FA , #F8F9FA);
+  width: 90px;
+  font-size: 20px;
+}
+.collapsetab li:nth-child(2) {
+  background-color: #2b3990;
+  background: linear-gradient(to left, #2b3990 , #1a124d);
+  width: 90px;
+  font-size: 20px;
+}
+.collapsetab li:nth-child(3) {
+  background-color: #ffcb05;
+  background: linear-gradient(to left, #ffcb05 , #f2633a);
+  width: 90px;
+  font-size: 20px;
+}
+.collapsetab li:nth-child(4) {
+  background-color: #a952a0;
+  background: linear-gradient(to left, #a952a0 , #513f99);
+  width: 90px;
+  font-size: 20px;
+}
